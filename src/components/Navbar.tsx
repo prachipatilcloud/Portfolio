@@ -38,20 +38,27 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold">
-            <span className="text-foreground">Prachi</span>{" "}
-            <span className="text-primary">Patil</span>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <img 
+              src="/logo.svg" 
+              alt="Prachi Patil Logo" 
+              className="w-8 h-8 sm:w-10 sm:h-10 hover:scale-110 transition-transform duration-300"
+            />
+            <div className="text-lg sm:text-xl lg:text-2xl font-bold">
+              <span className="text-foreground">Prachi</span>{" "}
+              <span className="text-primary">Patil</span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors duration-200 relative group"
+                className="text-sm xl:text-base text-foreground hover:text-primary transition-colors duration-200 relative group"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -59,7 +66,7 @@ const Navbar = () => {
             ))}
             <Button
               onClick={() => scrollToSection("#contact")}
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-sm xl:text-base px-4 xl:px-6"
             >
               Let's Connect
             </Button>
@@ -67,29 +74,30 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="lg:hidden text-foreground p-2 hover:bg-primary/10 rounded-lg transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
-            <div className="flex flex-col gap-4">
+          <div className="lg:hidden mt-4 pb-4 animate-fade-in border-t border-border/20 pt-4">
+            <div className="flex flex-col gap-3">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-foreground hover:text-primary transition-colors duration-200 text-left py-2"
+                  className="text-foreground hover:text-primary transition-colors duration-200 text-left py-3 px-2 rounded-lg hover:bg-primary/5 font-medium"
                 >
                   {item.name}
                 </button>
               ))}
               <Button
                 onClick={() => scrollToSection("#contact")}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 w-full"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 w-full mt-2"
               >
                 Let's Connect
               </Button>

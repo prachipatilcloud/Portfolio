@@ -19,108 +19,93 @@ const projects = [
   demo: "#",
   },
   {
-    title: "Blog Application",
-    description:
-      "Interactive weather application displaying current conditions, forecasts, and historical data with beautiful visualizations.",
-    tags: ["React", "REST API", "Charts.js"],
-    github: "https://github.com/prachipatidar04",
-    demo: "#",
-  },
-  {
-    title: "Portfolio Generator",
-    description:
-      "Dynamic portfolio website generator allowing users to create professional portfolios using customizable templates and themes.",
-    tags: ["React", "TypeScript", "CSS"],
-    github: "https://github.com/prachipatidar04",
-    demo: "#",
-  },
-  {
-    title: "Social Media Dashboard",
-    description:
-      "Analytics dashboard for social media metrics with interactive charts, data visualization, and export functionality.",
-    tags: ["React", "Node.js", "MongoDB"],
-    github: "https://github.com/prachipatidar04",
-    demo: "#",
-  },
-  {
-    title: "Recipe Finder App",
-    description:
-      "Recipe search and discovery platform with filters, favorites, and meal planning features. Integrated with external recipe API.",
-    tags: ["React", "API Integration", "CSS"],
-    github: "https://github.com/prachipatidar04",
-    demo: "#",
-  },
+  title: "Blog Application",
+  description:
+    "A full-stack blog platform where users can create, edit, and delete posts with authentication, rich text editing, and seamless data management.",
+  tags: ["React", "Node.js", "MongoDB", "Express"],
+  github: "https://github.com/prachipatilcloud",
+  demo: "#",
+},
+{
+  title: "Expense Tracker",
+  description:
+    "A web application that helps users track their income and expenses, visualize spending patterns, and manage budgets effectively with interactive charts.",
+  tags: ["React", "JavaScript", "Tailwind CSS"],
+  github: "https://github.com/prachipatilcloud",
+  demo: "https://expense-tracker-me4v290lc-prachipatilclouds-projects.vercel.app",
+}
+
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-4 bg-background">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-8 sm:mb-12 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Featured <span className="text-primary">Projects</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
             Showcasing my work and problem-solving approach
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
           {projects.map((project, idx) => (
             <div
               key={project.title}
-              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--glow-primary)] animate-fade-in"
+              className="group p-4 sm:p-6 rounded-2xl bg-card border border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--glow-primary)] animate-fade-in"
               style={{ animationDelay: `${idx * 100}ms` }}
             >
-              <div className="mb-4">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+              <div className="mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                   {project.description}
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20"
+                    className="px-2 sm:px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex-1 border-primary text-primary hover:bg-primary/10"
+                  className="flex-1 border-primary text-primary hover:bg-primary/10 text-xs sm:text-sm"
                   asChild
                 >
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2"
+                    className="flex items-center justify-center gap-1.5 sm:gap-2"
                   >
-                    <Github className="w-4 h-4" />
+                    <Github className="w-3 h-3 sm:w-4 sm:h-4" />
                     Code
                   </a>
                 </Button>
                 <Button
                   size="sm"
-                  className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
+                  className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 text-xs sm:text-sm"
                   asChild
                 >
                   <a
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2"
+                    className="flex items-center justify-center gap-1.5 sm:gap-2"
                   >
-                    <ExternalLink className="w-4 h-4" />
+                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                     Demo
                   </a>
                 </Button>
@@ -129,20 +114,20 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12 animate-fade-in [animation-delay:600ms]">
+        <div className="text-center mt-8 sm:mt-12 animate-fade-in [animation-delay:600ms]">
           <Button
             variant="outline"
             size="lg"
-            className="border-primary text-primary hover:bg-primary/10"
+            className="border-primary text-primary hover:bg-primary/10 text-sm sm:text-base"
             asChild
           >
             <a
-              href="https://github.com/prachipatidar04"
+              href="https://github.com/prachipatilcloud"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               View All Projects on GitHub
             </a>
           </Button>
