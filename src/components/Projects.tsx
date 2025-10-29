@@ -33,6 +33,14 @@ const projects = [
   tags: ["React", "JavaScript", "Tailwind CSS"],
   github: "https://github.com/prachipatilcloud",
   demo: "https://expense-tracker-me4v290lc-prachipatilclouds-projects.vercel.app",
+},
+{
+  title: "Notes App",
+  description:
+    "A simple and intuitive notes management application that allows users to create, edit, delete, and organize their notes efficiently with a clean and responsive UI.",
+  tags: ["React", "JavaScript", "Tailwind CSS"],
+  github: "https://github.com/prachipatilcloud",
+  demo: "https://notecrafts.netlify.app/",
 }
 
 ];
