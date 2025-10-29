@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Download } from "lucide-react";
 import profilePic from "@/assets/profile-picture.jpg";
 
 const Hero = () => {
@@ -63,6 +63,21 @@ const Hero = () => {
                 className="bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[var(--glow-primary)] transition-all duration-300 w-full sm:w-auto"
               >
                 View Projects
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-secondary text-secondary hover:bg-secondary/10 w-full sm:w-auto"
+                asChild
+              >
+                <a
+                  href="/resume.pdf"
+                  download="Prachi_Patil_Resume.pdf"
+                  className="flex items-center gap-2"
+                >
+                  <Download className="w-4 h-4" />
+                  Download Resume
+                </a>
               </Button>
               <Button
                 onClick={() => scrollToSection("#contact")}

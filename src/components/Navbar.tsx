@@ -10,6 +10,8 @@ const navItems = [
   { name: "Contact", href: "#contact" },
 ];
 
+const resumeItem = { name: "Resume", href: "/resume.pdf", download: "Prachi_Patil_Resume.pdf" };
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -64,6 +66,14 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
+            <a
+              href={resumeItem.href}
+              download={resumeItem.download}
+              className="text-sm xl:text-base text-foreground hover:text-secondary transition-colors duration-200 relative group"
+            >
+              {resumeItem.name}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+            </a>
             <Button
               onClick={() => scrollToSection("#contact")}
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-sm xl:text-base px-4 xl:px-6"
@@ -95,6 +105,14 @@ const Navbar = () => {
                   {item.name}
                 </button>
               ))}
+              <a
+                href={resumeItem.href}
+                download={resumeItem.download}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-foreground hover:text-secondary transition-colors duration-200 text-left py-3 px-2 rounded-lg hover:bg-secondary/5 font-medium"
+              >
+                {resumeItem.name}
+              </a>
               <Button
                 onClick={() => scrollToSection("#contact")}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 w-full mt-2"
