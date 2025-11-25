@@ -2,21 +2,21 @@ import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
-  {
-    title: "E-Commerce Platform",
-    description:
-      "Full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration. Built with MERN stack.",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-    github: "https://github.com/prachipatilcloud",
-    demo: "#",
-  },
+  // {
+  //   title: "E-Commerce Platform",
+  //   description:
+  //     "Full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration. Built with MERN stack.",
+  //   tags: ["React", "Node.js", "MongoDB", "Express"],
+  //   github: "https://github.com/prachipatilcloud",
+  //   demo: "#",
+  // },
   {
   title: "Home Utility Management System",
   description:
     "A comprehensive system to manage household utilities efficiently, track bills, schedule maintenance, and monitor usage patterns.",
   tags: ["React", "Firebase", "Tailwind CSS"],
   github: "https://github.com/prachipatilcloud",
-  demo: "#",
+  // demo: "#",
   },
   {
   title: "Blog Application",
@@ -24,7 +24,7 @@ const projects = [
     "A full-stack blog platform where users can create, edit, and delete posts with authentication, rich text editing, and seamless data management.",
   tags: ["React", "Node.js", "MongoDB", "Express"],
   github: "https://github.com/prachipatilcloud",
-  demo: "#",
+  demo: "https://blog-application-five-sooty.vercel.app/",
 },
 {
   title: "Expense Tracker",
@@ -41,6 +41,14 @@ const projects = [
   tags: ["React", "JavaScript", "Tailwind CSS"],
   github: "https://github.com/prachipatilcloud",
   demo: "https://notecrafts.netlify.app/",
+},
+{
+  title: "Photostat App",
+  description:
+    "Photostat is a photography portfolio that showcases model photoshoots and creative visual collections in a clean and modern layout.",
+  tags: ["React", "JavaScript", "Tailwind CSS"],
+  github: "https://github.com/prachipatilcloud/Photostat",
+  demo: "https://prachipatilcloud.github.io/Photostat/",
 }
 
 ];
