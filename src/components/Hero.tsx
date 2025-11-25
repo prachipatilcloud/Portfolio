@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen flex items-center justify-center pt-20 sm:pt-24 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8"
       style={{ background: "var(--gradient-hero)" }}
     >
       <div className="container mx-auto max-w-7xl">

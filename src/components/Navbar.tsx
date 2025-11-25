@@ -24,6 +24,18 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -35,8 +47,8 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border"
+        isScrolled || isMobileMenuOpen
+          ? "bg-background/95 backdrop-blur-lg border-b border-border"
           : "bg-transparent"
       }`}
     >
@@ -84,43 +96,58 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-foreground p-2 hover:bg-primary/10 rounded-lg transition-colors"
+            className="lg:hidden text-foreground p-2 hover:bg-primary/10 rounded-lg transition-all duration-200 relative z-50 border border-transparent hover:border-primary/20"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
-            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {isMobileMenuOpen ? (
+              <X size={22} className="text-primary" />
+            ) : (
+              <Menu size={22} />
+            )}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Overlay */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 animate-fade-in border-t border-border/20 pt-4">
-            <div className="flex flex-col gap-3">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-foreground hover:text-primary transition-colors duration-200 text-left py-3 px-2 rounded-lg hover:bg-primary/5 font-medium"
-                >
-                  {item.name}
-                </button>
-              ))}
-              <a
-                href={resumeItem.href}
-                download={resumeItem.download}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-foreground hover:text-secondary transition-colors duration-200 text-left py-3 px-2 rounded-lg hover:bg-secondary/5 font-medium"
-              >
-                {resumeItem.name}
-              </a>
-              <Button
-                onClick={() => scrollToSection("#contact")}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 w-full mt-2"
-              >
-                Let's Connect
-              </Button>
+          <>
+            {/* Backdrop */}
+            <div 
+              className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40 lg:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            
+            {/* Mobile Menu */}
+            <div className="fixed top-16 left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border shadow-lg z-50 lg:hidden animate-fade-in">
+              <div className="container mx-auto px-4 py-6">
+                <div className="flex flex-col gap-4">
+                  {navItems.map((item) => (
+                    <button
+                      key={item.name}
+                      onClick={() => scrollToSection(item.href)}
+                      className="text-foreground hover:text-primary transition-colors duration-200 text-left py-4 px-4 rounded-lg hover:bg-primary/10 font-medium text-lg border border-transparent hover:border-primary/20"
+                    >
+                      {item.name}
+                    </button>
+                  ))}
+                  <a
+                    href={resumeItem.href}
+                    download={resumeItem.download}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-foreground hover:text-secondary transition-colors duration-200 text-left py-4 px-4 rounded-lg hover:bg-secondary/10 font-medium text-lg border border-transparent hover:border-secondary/20"
+                  >
+                    {resumeItem.name}
+                  </a>
+                  <Button
+                    onClick={() => scrollToSection("#contact")}
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 w-full mt-4 py-4 text-lg font-medium"
+                  >
+                    Let's Connect
+                  </Button>
+                </div>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </div>
     </nav>
