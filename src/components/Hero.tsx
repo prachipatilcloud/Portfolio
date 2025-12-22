@@ -119,10 +119,10 @@ const Hero = () => {
                 alt="Prachi Prakash Patil"
                 className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary/30 shadow-2xl animate-float"
               />
-              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 px-3 sm:px-6 py-2 sm:py-3 bg-card border border-primary rounded-xl sm:rounded-2xl shadow-lg">
-                <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">1+</p>
+              {/* <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 px-3 sm:px-6 py-2 sm:py-3 bg-card border border-primary rounded-xl sm:rounded-2xl shadow-lg">
+                <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary">0</p>
                 <p className="text-xs sm:text-sm text-muted-foreground">Years Experience</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
