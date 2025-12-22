@@ -12,45 +12,53 @@ const projects = [
   //   demo: "#",
   // },
   {
-  title: "Home Utility Management System",
-  description:
-    "A comprehensive system to manage household utilities efficiently, track bills, schedule maintenance, and monitor usage patterns.",
-  tags: ["React", "Firebase", "Tailwind CSS"],
-  github: "https://github.com/prachipatilcloud",
-  // demo: "#",
+    title: "AI Creative Studio",
+    description:
+      "A versatile AI-powered SaaS platform for content creation and image manipulation. Generate blogs and articles, create stunning images, perform intelligent editing, and seamlessly remove unwanted elements from photos.",
+    tags: ["React", "OpenAI API", "Tailwind CSS"],
+    github: "https://github.com/prachipatilcloud",
+    demo: "https://quick-ai-seven-sand.vercel.app/",
   },
   {
-  title: "Blog Application",
-  description:
-    "A full-stack blog platform where users can create, edit, and delete posts with authentication, rich text editing, and seamless data management.",
-  tags: ["React", "Node.js", "MongoDB", "Express"],
-  github: "https://github.com/prachipatilcloud",
-  demo: "https://blog-application-five-sooty.vercel.app/",
-},
-{
-  title: "Expense Tracker",
-  description:
-    "A web application that helps users track their income and expenses, visualize spending patterns, and manage budgets effectively with interactive charts.",
-  tags: ["React", "JavaScript", "Tailwind CSS"],
-  github: "https://github.com/prachipatilcloud",
-  demo: "https://expense-tracker-me4v290lc-prachipatilclouds-projects.vercel.app",
-},
-{
-  title: "Notes App",
-  description:
-    "A simple and intuitive notes management application that allows users to create, edit, delete, and organize their notes efficiently with a clean and responsive UI.",
-  tags: ["React", "JavaScript", "Tailwind CSS"],
-  github: "https://github.com/prachipatilcloud",
-  demo: "https://notecrafts.netlify.app/",
-},
-{
-  title: "Photostat App",
-  description:
-    "Photostat is a photography portfolio that showcases model photoshoots and creative visual collections in a clean and modern layout.",
-  tags: ["React", "JavaScript", "Tailwind CSS"],
-  github: "https://github.com/prachipatilcloud/Photostat",
-  demo: "https://prachipatilcloud.github.io/Photostat/",
-}
+    title: "Home Utility Management System",
+    description:
+      "A comprehensive system to manage household utilities efficiently, track bills, schedule maintenance, and monitor usage patterns.",
+    tags: ["React", "Firebase", "Tailwind CSS"],
+    github: "https://github.com/prachipatilcloud",
+    // demo: "#",
+  },
+  {
+    title: "Blog Application",
+    description:
+      "A full-stack blog platform where users can create, edit, and delete posts with authentication, rich text editing, and seamless data management.",
+    tags: ["React", "Node.js", "MongoDB", "Express"],
+    github: "https://github.com/prachipatilcloud",
+    demo: "https://blog-application-five-sooty.vercel.app/",
+  },
+  {
+    title: "Expense Tracker",
+    description:
+      "A web application that helps users track their income and expenses, visualize spending patterns, and manage budgets effectively with interactive charts.",
+    tags: ["React", "JavaScript", "Tailwind CSS"],
+    github: "https://github.com/prachipatilcloud",
+    demo: "https://expense-tracker-me4v290lc-prachipatilclouds-projects.vercel.app",
+  },
+  {
+    title: "Notes App",
+    description:
+      "A simple and intuitive notes management application that allows users to create, edit, delete, and organize their notes efficiently with a clean and responsive UI.",
+    tags: ["React", "JavaScript", "Tailwind CSS"],
+    github: "https://github.com/prachipatilcloud",
+    demo: "https://notecrafts.netlify.app/",
+  },
+  {
+    title: "Photostat App",
+    description:
+      "Photostat is a photography portfolio that showcases model photoshoots and creative visual collections in a clean and modern layout.",
+    tags: ["React", "JavaScript", "Tailwind CSS"],
+    github: "https://github.com/prachipatilcloud/Photostat",
+    demo: "https://prachipatilcloud.github.io/Photostat/",
+  }
 
 ];
 
